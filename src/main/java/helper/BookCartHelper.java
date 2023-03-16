@@ -9,7 +9,7 @@ public class BookCartHelper {
         JsonPath jsonpath = response.jsonPath();
         Integer responseBookID= jsonpath.getInt("[0].book.bookId");
         if (bookId!=null && responseBookID !=null){
-            Assert.assertEquals("99",String.valueOf(responseBookID) );
+            Assert.assertEquals(bookId,String.valueOf(responseBookID) );
         }
     }
 }
