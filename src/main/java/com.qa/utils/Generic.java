@@ -12,7 +12,7 @@ public class Generic {
         Response response= RestAssured.given()
                 .when()
                 .post((String) URL);
-  //      Assert.assertEquals(expectedStatus,response.getStatusCode());
+        Assert.assertEquals(expectedStatus,response.getStatusCode());
         response.then().log().all();
         return response;
     }

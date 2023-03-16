@@ -20,11 +20,11 @@ public class ProblemStatement1 {
     @Test(dataProvider = "dataProvider")
     public void BookCartAssignment1(Object testCase, Object postUrl, Object bookId, Object getUrl, Object deleteUrl, Object expectedStatus) {
         String postBookCartUrl = postUrl + (String) bookId;
+        deleteApiCall(deleteUrl, expectedStatus);
         postApiCall(postBookCartUrl, expectedStatus);
         Response response =getApiCall(getUrl, expectedStatus);
         getBookStoreAssertions(response,bookId);
         deleteApiCall(deleteUrl, expectedStatus);
-
     }
 }
 
