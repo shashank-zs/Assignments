@@ -2,18 +2,17 @@ package pages.GumtreeAssignment;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class PostAnAd {
     WebDriver driver;
-    WebDriver wait;
 
     public PostAnAd (WebDriver driver){this.driver=driver;}
-    public void clickNoThanks(){
-        driver.findElement(By.cssSelector("input[class=\"btn-secondary set-left grid-col-12 grid-col-s-5\"]")).click();
-    }
+
     public void clickBrowse(){
-       WebElement browse= driver.findElement(By.cssSelector("button[class=\"btn-link set-left form-row-label space-mts\"]"));
         driver.findElement(By.cssSelector("button[class=\"btn-link set-left form-row-label space-mts\"]")).click();
     }
     public void clickForSale(){
@@ -55,19 +54,30 @@ public class PostAnAd {
         driver.findElement(By.cssSelector("label[for=\"post-ad_feature_WEBSITE_URL_selected\"]")).click();
     }
     public void inputWebsiteLink(String link) throws InterruptedException {
-        Thread.sleep(15);
-        driver.findElement(By.cssSelector("id=\"post-ad_websiteUrl\"")).isDisplayed();
-        driver.findElement(By.cssSelector("id=\"post-ad_websiteUrl\"")).sendKeys(link);
+        driver.findElement(By.cssSelector("input[id=\"post-ad_websiteUrl\"]")).isDisplayed();
+        driver.findElement(By.cssSelector("input[id=\"post-ad_websiteUrl\"]")).sendKeys(link);
     }
-    public void ClickEditMyDetails(){
-        driver.findElement(By.cssSelector("a[href=\"/manage-account/\"]")).click();
+    public void clickEditPostCode(){
+//        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class=\"btn-link txt-link\"]")));
+
+        driver.findElement(By.cssSelector("button[class=\"btn-link txt-link\"]")).click();
+    }
+    public void editPostCode(String postCode){
+        driver.findElement(By.cssSelector("input[id=\"post-ad_postcode\"]")).clear();
+        driver.findElement(By.cssSelector("input[id=\"post-ad_postcode\"]")).sendKeys(postCode);
+//        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("label[for=\\\"location_visible_on_map_locked\\\"]")));
+    }
+    public void checkPhone(){
+        driver.findElement(By.cssSelector("label[for=\"post-ad_usePhone\"]")).click();
+    }
+    public void inputPhone(String phone){
+        driver.findElement(By.cssSelector("input[id=\"post-ad_contactTelephone\"]")).sendKeys(phone);
+    }
+    public void postMyAd(){
+        driver.findElement(By.cssSelector("button[id=\"submit-button-2\"]")).click();
     }
 
     public void adPost() throws InterruptedException {
-        try{
-            clickNoThanks();
-        } catch (Exception e) {
-        }
 
         clickBrowse();
         clickForSale();
@@ -87,7 +97,14 @@ public class PostAnAd {
         setPrice("23");
         checkIncludeWebsite();
         inputWebsiteLink("www.shashank.com");
-        ClickEditMyDetails();
+        clickEditPostCode();
+        editPostCode("GU16 7HF");
+        clickGo();
+        checkPhone();
+        inputPhone("8329893289");
+        postMyAd();
+
+
 
     }
 }

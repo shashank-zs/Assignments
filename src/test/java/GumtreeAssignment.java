@@ -17,7 +17,7 @@ public class GumtreeAssignment {
         homepage.HomePage();
         PostAnAd postAdSteps =new PostAnAd(driver);
         postAdSteps.adPost();
-        driver.quit();
+       // driver.quit();
 
     }
 
