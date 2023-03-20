@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
 
-public class excelReader {
+public class ExcelReader {
     public static  Object[][] getData(String excelPath,String sheetName) throws IOException {
         try{
             int rowIndex=0, colIndex=0;

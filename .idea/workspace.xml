@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f76024-ad80-4849-b421-4905c13a33fb" name="Changes" comment="" />
+    <list default="true" id="19f76024-ad80-4849-b421-4905c13a33fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/UserPS2Helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserPS2/ProblemStatement2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/excelFiles/TestCasesUserApi.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/userPS2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/s.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.qa/utils/Generic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.qa/utils/Generic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.qa/utils/dataPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.qa/utils/DataPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.qa/utils/excelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.qa/utils/ExcelReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookCartPS1/DeleteBookCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookCartPS1/DeleteBookCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookCartPS1/GetBookCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookCartPS1/GetBookCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookCartPS1/PostBookCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookCartPS1/PostBookCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookCartPS1/ProblemStatement1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookCartPS1/ProblemStatement1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/utils/Generic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/utils/Generic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/utils/dataPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/utils/dataPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/utils/excelReader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/utils/excelReader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/utils/excelReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/utils/excelReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/helper/BookCartHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/helper/BookCartHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BookCartPS1/DeleteBookCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BookCartPS1/DeleteBookCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BookCartPS1/GetBookCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BookCartPS1/GetBookCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BookCartPS1/PostBookCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BookCartPS1/PostBookCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BookCartPS1/ProblemStatement1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BookCartPS1/ProblemStatement1.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +73,12 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ProblemStatement1.BookCartAssignment1">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/excelFiles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG./Users/raramuri/IdeaProjects/Assignments/src/test/resources/userPS2.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Assignments" />
       <method v="2">
@@ -97,10 +128,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProblemStatement2.userPS2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="s" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UserPS2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UserPS2" />
+      <option name="MAIN_CLASS_NAME" value="UserPS2.ProblemStatement2" />
+      <option name="METHOD_NAME" value="userPS2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/raramuri/IdeaProjects/Assignments/src/test/resources/userPS2.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="s" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UserPS2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/userPS2.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.PostBookCart.BookCartPositiveTestCases" />
+      <item itemvalue="TestNG.ProblemStatement1.BookCartAssignment1" />
+      <item itemvalue="TestNG./Users/raramuri/IdeaProjects/Assignments/src/test/resources/userPS2.xml" />
+      <item itemvalue="TestNG.ProblemStatement2.userPS2" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/raramuri/IdeaProjects/Assignments/src/test/resources/userPS2.xml" />
+        <item itemvalue="TestNG.ProblemStatement2.userPS2" />
         <item itemvalue="TestNG.ProblemStatement1.BookCartAssignment1" />
         <item itemvalue="TestNG.PostBookCart.BookCartPositiveTestCases" />
+        <item itemvalue="TestNG.ProblemStatement1.BookCartAssignment1" />
       </list>
     </recent_temporary>
   </component>
