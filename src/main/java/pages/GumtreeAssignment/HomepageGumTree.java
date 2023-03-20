@@ -13,6 +13,10 @@ public class HomepageGumTree {
     public void clickPostAnAd(){
         driver.findElement(By.cssSelector("a[class=\"btn-primary no-ads-button\"]")).click();
     }
+    public void clickDelete(){
+        driver.findElement(By.cssSelector("p[class=\"manage-ads-delete\"]")).click();
+        driver.findElement(By.cssSelector("a[title=\"Ad was not successful\"]")).click();
+    }
 
 
     public void HomePage(){
@@ -20,6 +24,11 @@ public class HomepageGumTree {
         LogInGumtree login = new LogInGumtree(driver);
         login.loginPage();
         try{
+            clickPostAnAd();
+        } catch (Exception e) {
+        }
+        try{
+            clickDelete();
             clickPostAnAd();
         } catch (Exception e) {
         }

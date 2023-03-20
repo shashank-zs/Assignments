@@ -1,10 +1,15 @@
 package pages.GumtreeAssignment;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class PostAnAd {
@@ -13,8 +18,10 @@ public class PostAnAd {
     public PostAnAd (WebDriver driver){this.driver=driver;}
 
     public void clickBrowse(){
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class=\"btn-link set-left form-row-label space-mts\"]")));
         driver.findElement(By.cssSelector("button[class=\"btn-link set-left form-row-label space-mts\"]")).click();
     }
+
     public void clickForSale(){
         driver.findElement(By.cssSelector("span[class=\"btn-indent-icn icn-tag txt-orphan-from-m\"]")).click();
     }
@@ -65,7 +72,6 @@ public class PostAnAd {
     public void editPostCode(String postCode){
         driver.findElement(By.cssSelector("input[id=\"post-ad_postcode\"]")).clear();
         driver.findElement(By.cssSelector("input[id=\"post-ad_postcode\"]")).sendKeys(postCode);
-//        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("label[for=\\\"location_visible_on_map_locked\\\"]")));
     }
     public void checkPhone(){
         driver.findElement(By.cssSelector("label[for=\"post-ad_usePhone\"]")).click();
@@ -77,7 +83,7 @@ public class PostAnAd {
         driver.findElement(By.cssSelector("button[id=\"submit-button-2\"]")).click();
     }
 
-    public void adPost() throws InterruptedException {
+    public void adPost() throws InterruptedException, IOException, AWTException {
 
         clickBrowse();
         clickForSale();
@@ -92,6 +98,41 @@ public class PostAnAd {
         }
         addTitle("ipod");
         checkUrgent();
+        driver.findElement(By.cssSelector("span[class=\"image-uploadab-icon\"]")).click();
+//        WebElement upload_file = driver.findElement(By.cssSelector("span[class=\"image-uploadab-icon\"]"));
+//        upload_file.sendKeys("/Users/raramuri/Downloads/download.jpeg");
+
+
+        // copying File path to Clipboard
+        StringSelection str = new StringSelection("/Users/raramuri/Downloads/download.jpeg");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+
+        driver.switchTo().window(driver.getWindowHandle());
+
+        Robot robot = new Robot();
+
+        //Open Goto window
+        robot.keyPress(KeyEvent.VK_META);
+        robot.keyPress(KeyEvent.VK_SHIFT);
+        robot.keyPress(KeyEvent.VK_G);
+        robot.keyRelease(KeyEvent.VK_META);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyRelease(KeyEvent.VK_G);
+
+        //Paste the clipboard value
+        robot.keyPress(KeyEvent.VK_META);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_META);
+        robot.keyRelease(KeyEvent.VK_V);
+
+        //Press Enter key to close the Goto window and Upload window
+        robot.delay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.delay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
         AddYoutubeLink("https://www.youtube.com/watch?v=gCuoVMmes4c");
         addDescription("iPod is 7 years old , sound is good and clear . Easy to carry and 32 gb internal storage.");
         setPrice("23");
@@ -100,9 +141,12 @@ public class PostAnAd {
         clickEditPostCode();
         editPostCode("GU16 7HF");
         clickGo();
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class=\"btn-link txt-link\"]")));
         checkPhone();
         inputPhone("8329893289");
         postMyAd();
+//        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//        FileUtils.copyFile(scrFile, new File("src/test/resources"));
 
 
 
