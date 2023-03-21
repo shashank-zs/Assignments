@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19f76024-ad80-4849-b421-4905c13a33fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/GumtreeHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/qa/utils/ExcelReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/excelFiles/GumteeAssignment2.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/s.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/utils/DataPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qa/utils/DataPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/utils/WebDriverUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/qa/utils/WebDriverUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/GumtreeAssignment/HomepageGumTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GumtreeAssignment/HomepageGumTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/GumtreeAssignment/LogInGumtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GumtreeAssignment/LogInGumtree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/GumtreeAssignment/PostAnAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GumtreeAssignment/PostAnAd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GumtreeAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GumtreeAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/utils/dataPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/utils/webDriverUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/GumtreeAssignment/HomepageGumTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/GumtreeAssignment/HomepageGumTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/GumtreeAssignment/LogInGumtree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/GumtreeAssignment/LogInGumtree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pages/GumtreeAssignment/PostAnAd.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/GumtreeAssignment/PostAnAd.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/GumtreeAssignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GumtreeAssignment.class" afterDir="false" />
     </list>
@@ -62,6 +74,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/excelFiles" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Assignments" />
@@ -90,6 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GumtreeAssignment.Assignment2" />
         <item itemvalue="TestNG.GumtreeAssignment.Assignment2" />
         <item itemvalue="TestNG.GumtreeAssignment.Assignment2" />
       </list>

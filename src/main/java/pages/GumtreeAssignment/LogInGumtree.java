@@ -2,6 +2,15 @@ package pages.GumtreeAssignment;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
+
+import static org.qa.utils.DataPath.EMAIL;
+import static org.qa.utils.DataPath.PASSWORD;
 
 public class LogInGumtree {
     WebDriver driver;
@@ -16,8 +25,9 @@ public class LogInGumtree {
         driver.findElement(By.cssSelector("button[class=\"btn-primary btn-full-width\"]")).click();
     }
     public void loginPage(){
-        inputEmail("shashankpurohitak50@gmail.com");
-        inputPassword("Shashank@1");
+       driver.findElement(By.cssSelector("a[data-q=\"login-tab\"]")).isDisplayed();
+        inputEmail(EMAIL);
+        inputPassword(PASSWORD);
         clickLogIn();
 
     }

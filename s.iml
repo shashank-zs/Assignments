@@ -146,10 +146,10 @@
     <orderEntry type="library" name="Maven: com.google.auto:auto-common:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-http:4.8.1" level="project" />
     <orderEntry type="library" name="Maven: dev.failsafe:failsafe:3.3.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:7.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.testng:testng:7.6.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.82" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.webjars:jquery:3.6.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.webjars:jquery:3.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20210307" level="project" />

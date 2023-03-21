@@ -1,6 +1,6 @@
 package pages.GumtreeAssignment;
 
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,13 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 
 public class PostAnAd {
     WebDriver driver;
-
     public PostAnAd (WebDriver driver){this.driver=driver;}
 
     public void clickBrowse(){
@@ -46,6 +43,9 @@ public class PostAnAd {
     public void addTitle(String title){
         driver.findElement(By.cssSelector("input[id=\"post-ad_title\"]")).sendKeys(title);
     } public void checkUrgent(){
+
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class=\"image-uploadab-delete\"]")));
+
         driver.findElement(By.cssSelector("label[for=\"post-ad_feature_URGENT_TOP_selected\"]")).click();
     }
     public void AddYoutubeLink(String link){
@@ -65,8 +65,6 @@ public class PostAnAd {
         driver.findElement(By.cssSelector("input[id=\"post-ad_websiteUrl\"]")).sendKeys(link);
     }
     public void clickEditPostCode(){
-//        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class=\"btn-link txt-link\"]")));
-
         driver.findElement(By.cssSelector("button[class=\"btn-link txt-link\"]")).click();
     }
     public void editPostCode(String postCode){
@@ -74,6 +72,7 @@ public class PostAnAd {
         driver.findElement(By.cssSelector("input[id=\"post-ad_postcode\"]")).sendKeys(postCode);
     }
     public void checkPhone(){
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class=\"btn-link txt-link\"]")));
         driver.findElement(By.cssSelector("label[for=\"post-ad_usePhone\"]")).click();
     }
     public void inputPhone(String phone){
@@ -83,8 +82,9 @@ public class PostAnAd {
         driver.findElement(By.cssSelector("button[id=\"submit-button-2\"]")).click();
     }
 
-    public void adPost() throws InterruptedException, IOException, AWTException {
 
+    public void adPost(String postCode,String title,String imagePath,String youTubeLink,String description,Integer price,String websiteLink,String editPostCode,Integer phone ) throws InterruptedException, AWTException {
+        driver.findElement(By.cssSelector("h1[class=\"space-mbs\"]")).isDisplayed();
         clickBrowse();
         clickForSale();
         clickAudioStereo();
@@ -92,26 +92,20 @@ public class PostAnAd {
         clickMp3Players();
         clickContinue();
         try{
-            inputPostCode("PO16 7GZ");
+            inputPostCode( postCode);
             clickGo();
         } catch (Exception e) {
         }
-        addTitle("ipod");
-        checkUrgent();
+        addTitle( title);
         driver.findElement(By.cssSelector("span[class=\"image-uploadab-icon\"]")).click();
-//        WebElement upload_file = driver.findElement(By.cssSelector("span[class=\"image-uploadab-icon\"]"));
-//        upload_file.sendKeys("/Users/raramuri/Downloads/download.jpeg");
 
-
-        // copying File path to Clipboard
-        StringSelection str = new StringSelection("/Users/raramuri/Downloads/download.jpeg");
+        StringSelection str = new StringSelection( imagePath);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 
         driver.switchTo().window(driver.getWindowHandle());
 
         Robot robot = new Robot();
 
-        //Open Goto window
         robot.keyPress(KeyEvent.VK_META);
         robot.keyPress(KeyEvent.VK_SHIFT);
         robot.keyPress(KeyEvent.VK_G);
@@ -119,13 +113,11 @@ public class PostAnAd {
         robot.keyRelease(KeyEvent.VK_SHIFT);
         robot.keyRelease(KeyEvent.VK_G);
 
-        //Paste the clipboard value
         robot.keyPress(KeyEvent.VK_META);
         robot.keyPress(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_META);
         robot.keyRelease(KeyEvent.VK_V);
 
-        //Press Enter key to close the Goto window and Upload window
         robot.delay(1000);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
@@ -133,22 +125,17 @@ public class PostAnAd {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-        AddYoutubeLink("https://www.youtube.com/watch?v=gCuoVMmes4c");
-        addDescription("iPod is 7 years old , sound is good and clear . Easy to carry and 32 gb internal storage.");
-        setPrice("23");
+        checkUrgent();
+        AddYoutubeLink(youTubeLink);
+        addDescription(description);
+        setPrice(String.valueOf(price));
         checkIncludeWebsite();
-        inputWebsiteLink("www.shashank.com");
+        inputWebsiteLink(websiteLink);
         clickEditPostCode();
-        editPostCode("GU16 7HF");
+        editPostCode(editPostCode);
         clickGo();
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class=\"btn-link txt-link\"]")));
         checkPhone();
-        inputPhone("8329893289");
+        inputPhone(String.valueOf(phone));
         postMyAd();
-//        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        FileUtils.copyFile(scrFile, new File("src/test/resources"));
-
-
-
     }
 }

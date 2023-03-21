@@ -1,7 +1,10 @@
 package pages.GumtreeAssignment;
 
+import helper.GumtreeHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static helper.GumtreeHelper.assertionHomepage;
 
 public class HomepageGumTree {
     WebDriver driver;
@@ -20,6 +23,9 @@ public class HomepageGumTree {
 
 
     public void HomePage(){
+        GumtreeHelper assertionHome= new GumtreeHelper(driver);
+        assertionHome.assertionHomepage();
+        assertionHomepage();
         clickLoginButton();
         LogInGumtree login = new LogInGumtree(driver);
         login.loginPage();
@@ -33,6 +39,11 @@ public class HomepageGumTree {
         } catch (Exception e) {
         }
         try{
+            clickNoThanks();
+        } catch (Exception e) {
+        }
+        try{
+            driver.switchTo().window(driver.getWindowHandle());
             clickNoThanks();
         } catch (Exception e) {
         }
