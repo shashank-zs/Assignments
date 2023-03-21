@@ -1,6 +1,7 @@
 package UserPS2;
 
-import com.qa.utils.ExcelReader;
+
+import com.utils.ExcelReader;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.DataProvider;
@@ -9,8 +10,9 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Map;
 
-import static com.qa.utils.DataPath.*;
-import static com.qa.utils.Generic.*;
+
+import static com.utils.DataPath.*;
+import static com.utils.Generic.*;
 import static helper.UserPS2Helper.AssertionGetUser;
 
 public class ProblemStatement2 {

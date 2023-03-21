@@ -1,13 +1,13 @@
 package BookCartPS1;
 
-import com.qa.utils.ExcelReader;
+import com.utils.ExcelReader;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static com.qa.utils.Generic.postApiCall;
-import static com.qa.utils.DataPath.*;
+import static com.utils.Generic.postApiCall;
+import static com.utils.DataPath.*;
 
 public class PostBookCart {
     @DataProvider(name = "PositiveDataProvider")

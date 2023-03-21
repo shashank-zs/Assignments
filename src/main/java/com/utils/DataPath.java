@@ -1,4 +1,4 @@
-package com.qa.utils;
+package com.utils;
 
 public class DataPath {
     public static String BASE_URL_SHOPPING_CART="https://bookcart.azurewebsites.net/api/ShoppingCart";
