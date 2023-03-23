@@ -26,6 +26,6 @@ public class GumtreeAssignment {
         homepage.HomePage();
         PostAnAd postAdSteps =new PostAnAd(driver);
         postAdSteps.adPost(postCode,title,imagePath,youTubeLink,description,price,websiteLink,editPostCode,phone);
-        driver.quit();
+
     }
 }

@@ -10,6 +10,8 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 
+import static helper.GumtreeHelper.SwitchToPrevWindow;
+
 public class PostAnAd {
     WebDriver driver;
     public PostAnAd (WebDriver driver){this.driver=driver;}
@@ -44,7 +46,7 @@ public class PostAnAd {
         driver.findElement(By.cssSelector("input[id=\"post-ad_title\"]")).sendKeys(title);
     } public void checkUrgent(){
 
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class=\"image-uploadab-delete\"]")));
+     //   new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class=\"image-uploadab-delete\"]")));
 
         driver.findElement(By.cssSelector("label[for=\"post-ad_feature_URGENT_TOP_selected\"]")).click();
     }
@@ -124,6 +126,7 @@ public class PostAnAd {
         robot.delay(1000);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+        SwitchToPrevWindow();
 
         checkUrgent();
         AddYoutubeLink(youTubeLink);
